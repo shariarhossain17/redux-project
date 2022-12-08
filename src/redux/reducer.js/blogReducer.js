@@ -1,9 +1,7 @@
 import { FETCH_DATA } from "../actionType/blogActionType";
 
-
 const initialState = {
   blogs: [],
-  cart: [],
 };
 
 const blogReducer = (state = initialState, action) => {
