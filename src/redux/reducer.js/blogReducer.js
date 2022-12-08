@@ -1,9 +1,21 @@
-const initialState = {
-    test:"test"
-}
+import { FETCH_DATA } from "../actionType/blogActionType";
 
-const blogReducer = (state = initialState,action) => {
-    return state
-}
+
+const initialState = {
+  blogs: [],
+  cart: [],
+};
+
+const blogReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_DATA:
+      return {
+        ...state,
+        blogs: action.payload,
+      };
+    default:
+      return state;
+  }
+};
 
 export default blogReducer;
