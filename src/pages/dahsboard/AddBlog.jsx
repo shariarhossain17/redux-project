@@ -4,13 +4,13 @@ const AddBlog = () => {
   const { register, handleSubmit } = useForm();
   const submit = (data) => {
     const blog = {
-      name:data.name,
-      category:data.brand,
-      img:data.image,
-      title:data.tile,
-      blog:data.blog
+      name: data.name,
+      category: data.brand,
+      img: data.image,
+      title: data.tile,
+      blog: data.blog,
     };
-console.log(blog);
+    console.log(blog);
   };
   return (
     <div className="flex justify-center items-center h-full ">
