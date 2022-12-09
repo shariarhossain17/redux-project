@@ -1,3 +1,4 @@
+import BlogSIngleCard from "../cpmponent/BlogSIngleCard";
 import Dashboard from "../layout/dashboard/Dashboard";
 import AddBlog from "../pages/dahsboard/AddBlog";
 import Allblog from "../pages/dahsboard/Allblog";
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "blog/:id",
+        element: <BlogSIngleCard/>,
       },
     ],
   },
