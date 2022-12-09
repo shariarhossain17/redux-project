@@ -1,4 +1,4 @@
-import { FETCH_DATA } from "../actionType/blogActionType";
+import { ADD_BLOG, FETCH_DATA } from "../actionType/blogActionType";
 
 const initialState = {
   blogs: [],
@@ -11,6 +11,11 @@ const blogReducer = (state = initialState, action) => {
         ...state,
         blogs: action.payload,
       };
+      case ADD_BLOG:
+        return {
+          ...state,
+          blogs:[...state.blogs,action.payload]
+        }
     default:
       return state;
   }
