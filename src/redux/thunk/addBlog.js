@@ -2,7 +2,7 @@ import { addNewBlog } from "../action/blogAction";
 
 const addBlog = (product) => {
   return async (dispatch, getState) => {
-    const res = await fetch("http://localhost:5000/blog", {
+    const res = await fetch("https://redux-backend-production.up.railway.app/blog", {
       method: "POST",
       body: JSON.stringify(product),
       headers: {

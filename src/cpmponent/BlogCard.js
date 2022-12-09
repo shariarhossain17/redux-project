@@ -8,7 +8,7 @@ const BlogCard = ({ blog }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   return (
-    <div className="shadow-lg relative rounded-3xl border p-3 flex  flex-col text-indigo-900 h-[400px]">
+    <div className="shadow-lg relative rounded-3xl border p-3 flex  flex-col text-indigo-900 h-[450px]">
       <div className=" mx-auto">
         <img
           width="400px"

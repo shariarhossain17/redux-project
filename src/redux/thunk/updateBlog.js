@@ -2,7 +2,7 @@ import { updateBlog } from "../action/blogAction";
 
 const updateBlogData = (data, id) => {
   return async (dispatch) => {
-    const res = await fetch(`http://localhost:5000/blog/${id}`, {
+    const res = await fetch(`https://redux-backend-production.up.railway.app/blog/${id}`, {
       method: "PATCH",
       body: JSON.stringify(data),
       headers: {
