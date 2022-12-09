@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import addBlog from "../../redux/thunk/addBlog";
 const AddBlog = () => {
-  const { register, handleSubmit } = useForm();
-  const dispatch = useDispatch()
+  const { register, handleSubmit,reset } = useForm();
+  const dispatch = useDispatch();
   const submit = (data) => {
     const blog = {
       name: data.name,
@@ -13,7 +13,8 @@ const AddBlog = () => {
       title: data.tile,
       blog: data.blog,
     };
-    dispatch(addBlog(blog))
+    dispatch(addBlog(blog));
+    reset()
   };
   return (
     <div className="flex justify-center items-center h-full ">

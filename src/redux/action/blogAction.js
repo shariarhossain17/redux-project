@@ -1,4 +1,8 @@
-import { ADD_BLOG, FETCH_DATA } from "../actionType/blogActionType";
+import {
+  ADD_BLOG,
+  FETCH_DATA,
+  REMOVE_BLOG
+} from "../actionType/blogActionType";
 
 export const fetchBlogData = (blog) => {
   return {
@@ -12,5 +16,9 @@ export const addNewBlog = (blog) => {
     payload: blog,
   };
 };
-
-
+export const deleteBlog = (id) => {
+  return {
+    type: REMOVE_BLOG,
+    payload: id,
+  };
+};
